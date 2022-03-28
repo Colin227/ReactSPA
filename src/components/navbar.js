@@ -35,7 +35,7 @@ export default class Navbar extends React.Component {
     render() {
         return(
             <ul className="navbar-container"> 
-                <li className="navbar-element" onClick={this.toggleActive}><button className="navbar-button" onClick={() => this.props.handleClick(1)} type="button" value="1">First Page</button></li>
+                <li className="navbar-element" onClick={this.toggleActive}><button className="navbar-button nav-active" onClick={() => this.props.handleClick(1)} type="button" value="1">First Page</button></li>
                 <li className="navbar-element" onClick={this.toggleActive}><button className="navbar-button" onClick={() => this.props.handleClick(2)} type="button" value="2">Second Page</button></li>
                 <li className="navbar-element" onClick={this.toggleActive}><button className="navbar-button" onClick={() => this.props.handleClick(3)} type="button" value="3">Third Page</button></li>
                 

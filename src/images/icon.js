@@ -5,6 +5,7 @@ import React from "react";
 function Icon() {
     return (
         <svg
+            id="main-icon"
             xmlns="http://www.w3.org/2000/svg"
             width="400"
             height="369.27"

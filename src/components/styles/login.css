@@ -28,7 +28,6 @@
 .form-label input {
     border-radius: 10px;
     border: 1px solid white;
-    /* padding-left: 10px; */
     background-color: white;
     padding: 5px 10px;
     width: 80%;
@@ -36,4 +35,11 @@
 
 button.form-label {
     width: 90%;
+}
+
+
+/* Logo is not centered due to rocket trail */
+
+#main-icon {
+    transform: translateX(-20px);
 }

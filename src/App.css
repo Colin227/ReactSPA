@@ -2,7 +2,7 @@
     text-align: center;
     /* background-color: #041C32; */
     background-color: #064663;
-    background-image: url('./images/wave.svg');
+    background-image: url("./images/wave.svg");
     /* background-image: url('./images/desk-background.jpg'); */
     background-repeat: no-repeat;
     background-size: cover;
@@ -22,7 +22,6 @@ button {
 }
 
 .App-header {
-    /* background-color: #282c34; */
     min-height: 100vh;
     display: flex;
     flex-direction: column;

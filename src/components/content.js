@@ -10,8 +10,7 @@ export default class Content extends React.Component {
         this.navigateToPage = this.navigateToPage.bind(this);
     }
     navigateToPage(page) {
-        this.setState({ pageToDisplay: page});
-        
+        this.setState({ pageToDisplay: page });
     }
     // This is the main page routing - render page corresponding to pageToDisplay value
     render() {

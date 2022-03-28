@@ -13,7 +13,6 @@ li button {
 }
 
 .navbar-element {
-    /* display: flex; */
     padding: 5px 10px;
 }
 
@@ -21,20 +20,16 @@ li button {
     padding: 5px;
     border: 1px solid #ffffff;
     background-color: rgba(255, 255, 255, 0.6);
+    border-radius: 10px;
 }
 
 .navbar-button.signout-button {
-    border: 1px solid #ECB365;
+    border: 1px solid #ecb365;
     box-sizing: content-box;
 }
 
-
-/* .navbar-button.selected {
-    border: 10px solid violet;
-} */
-
 button.nav-active {
-    background-color: #ECB365;
+    background-color: #ecb365;
 }
 
 button.nav-inactive {

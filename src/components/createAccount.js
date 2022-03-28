@@ -1,41 +1,40 @@
 import React from "react";
 
+// Account creation form component
 export default class CreateAccount extends React.Component {
     constructor(props) {
         super(props);
         this.state = { accountExists: props.accountExists, username: null, password: null, displayname: null };
+        
+        // Must bind these methods due to passing them through to the child components
         this.handleChange = this.handleChange.bind(this);
         this.handleCreateAccount = this.handleCreateAccount.bind(this);
-        
-
     }
-    // This handles setting the state for username and password
+    // Handles setting the state for username and password
     // Updates as the input text value changes
     handleChange = (e) => {
-        const input = e.target; // key is set from the input 
+        const input = e.target; // key is set from the input target 
         const value = input.value; // value is set
         this.setState({ [input.name]: value }); 
     };
 
     handleCreateAccount(e) {
         e.preventDefault(); // stop page from default refresh event
-        // console.log('Creating account...'); // Testing purposes
-        // console.log(this.state.username);
-        // console.log(this.state.password);
         
+        // Regex expression checking password for only numbers
         let passNums = /^[0-9]+$/.test(this.state.password);
         
+        // If there are non-numeric characters, passNums will evaluate
+        // as false, alerting the user to only input numbers.
         if (passNums === false){
             alert('Passwords must contain numeric values only!');
             return;
         }
+
         // create a json string for the account values
         let accountjson = JSON.stringify({"username": this.state.username, "password": this.state.password, "displayname": this.state.displayname});
-        // localStorage.setItem("username", this.state.username);
-        // localStorage.setItem("password", this.state.password);
         localStorage.setItem("account", accountjson); // store account info in local storage
         this.props.toggleAccountExists();
-        // const {user, password} = 
     }
 
     render() {
