@@ -87,7 +87,7 @@ export default class Login extends React.Component {
                             placeholder="Password"
                             autoComplete="Password"
                             pattern="[0-9]*"
-                            inputmode="numeric"
+                            inputMode="numeric"
                             onChange={this.handleChange}
                         ></input>
                     </label>
@@ -103,8 +103,8 @@ export default class Login extends React.Component {
 
             </div>
         ) : (
-            <div>
-                <h1>Create an Account</h1>
+            <div className="login-form">
+                <h2>Create an Account</h2>
                 <CreateAccount
                     accountExists={this.state.accountExists}
                     toggleAccountExists={this.toggleAccountExists}

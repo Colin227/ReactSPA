@@ -19,14 +19,13 @@ export default class CreateAccount extends React.Component {
 
     handleCreateAccount(e) {
         e.preventDefault(); // stop page from default refresh event
-        console.log('Creating account...'); // Testing purposes
-        console.log(this.state.username);
-        console.log(this.state.password);
+        // console.log('Creating account...'); // Testing purposes
+        // console.log(this.state.username);
+        // console.log(this.state.password);
         
         let passNums = /^[0-9]+$/.test(this.state.password);
         
         if (passNums === false){
-            console.log('passnums fail');
             alert('Passwords must contain numeric values only!');
             return;
         }
@@ -42,7 +41,7 @@ export default class CreateAccount extends React.Component {
     render() {
         return (
             <form>
-                <label>Username: 
+                <label className="form-label">
                 <input
                     type="text"
                     name="username"
@@ -51,7 +50,7 @@ export default class CreateAccount extends React.Component {
                     onChange={this.handleChange}
                 ></input></label>
                 <br></br>
-                <label>Password: 
+                <label className="form-label"> 
                 <input
                     type="password"
                     name="password"
@@ -62,7 +61,7 @@ export default class CreateAccount extends React.Component {
                     onChange={this.handleChange}
                 ></input></label>
                 <br></br>
-                <label>Display Name:  
+                <label className="form-label"> 
                 <input
                     type="text"
                     name="displayname"

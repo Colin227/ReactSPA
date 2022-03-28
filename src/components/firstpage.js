@@ -1,6 +1,7 @@
 import React from 'react';
 import secret from '../images/secret.svg';
 import MyButton from "./mybutton.js";
+
 import Data from "./data.js";
 import "./styles/pages.css";
 
@@ -59,7 +60,6 @@ export default class FirstPage extends React.Component {
 
                 
                 <img src={secret} style={{position: 'absolute', right: 0, bottom: 0}}alt="Hidden easter egg"></img>
-                
             </div>
         )
     }

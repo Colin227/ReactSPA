@@ -28,6 +28,15 @@ li button {
     box-sizing: content-box;
 }
 
-.navbar-button.selected {
+
+/* .navbar-button.selected {
     border: 10px solid violet;
+} */
+
+button.nav-active {
+    background-color: #ECB365;
+}
+
+button.nav-inactive {
+    background-color: rgba(255, 255, 255, 0.6);
 }

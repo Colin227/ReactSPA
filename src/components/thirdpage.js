@@ -42,7 +42,7 @@ export default class ThirdPage extends React.Component {
         // console.log(this.state.data);
     }
     handleStopClick(e) {
-        console.log(e);
+        //console.log(e);
         this.setState({isTracking: false});
         navigator.geolocation.clearWatch(this.state.watchId);
         this.setState({ data: {
@@ -71,9 +71,8 @@ export default class ThirdPage extends React.Component {
             comments: "",
         };
         return (
-            <div>
+            <div className="third-page">
                 <h1>Hello {this.props.displayName}</h1>
-                <p>This is the third page</p>
                 <MyButton
                     handleClick={this.handleStartClick}
                     data={{ dataName: { ...startTracking } }}
