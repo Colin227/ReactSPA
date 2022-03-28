@@ -1,0 +1,33 @@
+.navbar-container {
+    list-style-type: none;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    border: 2px solid rgba(255, 255, 255, 0.6);
+    border-radius: 3px;
+    padding: 0;
+}
+
+li button {
+    margin: 0px 10px;
+}
+
+.navbar-element {
+    /* display: flex; */
+    padding: 5px 10px;
+}
+
+.navbar-button {
+    padding: 5px;
+    border: 1px solid #ffffff;
+    background-color: rgba(255, 255, 255, 0.6);
+}
+
+.navbar-button.signout-button {
+    border: 1px solid #ECB365;
+    box-sizing: content-box;
+}
+
+.navbar-button.selected {
+    border: 10px solid violet;
+}
