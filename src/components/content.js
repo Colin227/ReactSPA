@@ -12,6 +12,7 @@ export default class Content extends React.Component {
     navigateToPage(page) {
         this.setState({ pageToDisplay: page });
     }
+
     // This is the main page routing - render page corresponding to pageToDisplay value
     render() {
         let pageToDisplay = this.state.pageToDisplay;

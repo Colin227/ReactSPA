@@ -5,12 +5,14 @@ import "./App.css";
 import React from "react";
 import Login from "./components/login.js";
 import Content from "./components/content.js";
+import './components/styles/login.css';
 
 class App extends React.Component {
     constructor(props) {
         super(props);
         this.state = { isLoggedIn: false }; // User logged in state
         this.loginHandler = this.loginHandler.bind(this); // bind to App due to passing as prop to child components
+        
     }
     loginHandler(loginStatus, displayName) {
         this.setState({ isLoggedIn: loginStatus, displayName: displayName }); // Log in the user, and set the display name

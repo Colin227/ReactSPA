@@ -1,6 +1,7 @@
 import React from "react";
-// Params should be one object referred to as 'data'
-// with key value pairs for title, author, content and comments
+
+// Data model
+// Uses key value pairs for title, author, content and comments
 // Else show no data - hr elements will be shown to maintain styling
 export default class Data extends React.Component {
     render() {

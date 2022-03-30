@@ -1,6 +1,6 @@
 import React from "react";
 import CreateAccount from "./createAccount";
-import './styles/login.css';
+import "./styles/login.css";
 export default class Login extends React.Component {
     constructor(props) {
         super(props);
@@ -30,7 +30,6 @@ export default class Login extends React.Component {
     // then compares them to the current input values stored in state
     loginHandler(e) {
         e.preventDefault();
-        console.log("Attempting to login..."); // Testing purposes
         let account = localStorage.getItem("account");
         account = JSON.parse(account);
 
@@ -39,16 +38,13 @@ export default class Login extends React.Component {
                 this.state.usernameLogin === account["username"] &&
                 this.state.passwordLogin === account["password"]
             ) {
-                console.log("Logged in successfully");
+                //console.log("Logged in successfully");
 
                 this.props.toggleLogin(true, account["displayname"]);
             } else {
                 alert("Username or password was incorrect.");
             }
-        } else {
-            console.log("Please create an account");
         }
-        // console.log(this.state.password);
     }
 
     handleChange = (e) => {
@@ -63,7 +59,8 @@ export default class Login extends React.Component {
             accountExists: !prevState.accountExists,
         }));
     }
-
+    // If the account exists flag is true, return the account login
+    // Else return the create account component.
     render() {
         return this.state.accountExists ? (
             <div className="login-form">
@@ -80,7 +77,6 @@ export default class Login extends React.Component {
                     </label>
                     <br></br>
                     <label className="form-label">
-                        
                         <input
                             type="password"
                             name="passwordLogin"
@@ -91,16 +87,23 @@ export default class Login extends React.Component {
                             onChange={this.handleChange}
                         ></input>
                     </label>
-                    <button className="form-label" type="button" onClick={this.loginHandler}>
-                    Log in
-                </button>
+                    <button
+                        className="form-label"
+                        type="button"
+                        onClick={this.loginHandler}
+                    >
+                        Log in
+                    </button>
 
-                <p>Don't have an account yet?</p>
-                <button className="form-label" type="button" onClick={this.toggleAccountExists}>
-                    Create One
-                </button>
+                    <p>Don't have an account yet?</p>
+                    <button
+                        className="form-label"
+                        type="button"
+                        onClick={this.toggleAccountExists}
+                    >
+                        Create One
+                    </button>
                 </form>
-
             </div>
         ) : (
             <div className="login-form">

@@ -1,5 +1,5 @@
 import React from "react";
-
+import './styles/create.css';
 // Account creation form component
 export default class CreateAccount extends React.Component {
     constructor(props) {

@@ -1,9 +1,7 @@
 .App {
     text-align: center;
-    /* background-color: #041C32; */
     background-color: #064663;
     background-image: url("./images/wave.svg");
-    /* background-image: url('./images/desk-background.jpg'); */
     background-repeat: no-repeat;
     background-size: cover;
     overflow: hidden;
@@ -16,11 +14,6 @@ button {
     background-color: #ffffff;
 }
 
-.App-logo {
-    height: 40vmin;
-    pointer-events: none;
-}
-
 .App-header {
     min-height: 100vh;
     display: flex;
@@ -29,17 +22,4 @@ button {
     justify-content: center;
     font-size: calc(10px + 2vmin);
     color: white;
-}
-
-.App-link {
-    color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-    from {
-        transform: scale(1);
-    }
-    to {
-        transform: scale(0.8);
-    }
 }

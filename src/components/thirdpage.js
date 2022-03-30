@@ -13,20 +13,19 @@ export default class ThirdPage extends React.Component {
     }
     componentDidMount() {
         document.title = "Where am I?";
-        if (this.state.data.isTracking === true) {
-            console.log('hello');
-        }
+        // if (this.state.data.isTracking === true) {
+        //     console.log('hello we are tracking now');
+        // }
         
     }
+    // Start tracking the location
     handleStartClick(e) {
-        console.log(e);
-        
+        //console.log(e);
         this.setState({isTracking: true});
-        // this.getLocation();
-        
+        // Get watch ID of the geolocation - this is used for the clearWatch method
         let watchId = navigator.geolocation.watchPosition(this.showPosition);
         this.setState({watchId: watchId});
-        console.log(watchId);
+        //console.log(watchId);
 
     }
 
@@ -41,6 +40,7 @@ export default class ThirdPage extends React.Component {
         }})
         // console.log(this.state.data);
     }
+    // Stop tracking the location
     handleStopClick(e) {
         //console.log(e);
         this.setState({isTracking: false});
