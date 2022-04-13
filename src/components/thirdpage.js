@@ -28,7 +28,7 @@ export default class ThirdPage extends React.Component {
         //console.log(watchId);
 
     }
-
+    
     showPosition(position){
         let location = "Latitude: " + position.coords.latitude + " Longitude: " + position.coords.longitude;
         this.setState({ data: {
