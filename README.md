@@ -6,4 +6,3 @@ Mobile Computing
 Confederation College
 
 Colin Peterson
-100204617
